@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Discussion | Pronostics coupe du monde 2018</title>
+<title>Discussion | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -55,7 +55,7 @@ if (!isset($_SESSION['login'])) {
         $req->execute(array('com' => $num_commu));
 
         ?>
-        <font style="font-size: 30px;"><b>Toute la tribu s'est réunie autour de grands menhirs</b><br/><br/></font>
+        <font style="font-size: 30px;"><b>Le coin de sa communauté</b><br/><br/></font>
     </div>
     <table width="90%" align="center" style='border-collapse: collapse;'>
         <tr>

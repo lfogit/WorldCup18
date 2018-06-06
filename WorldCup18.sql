@@ -1,11 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.7.7
--- https://www.phpmyadmin.net/
---
--- Hôte : localhost
--- Généré le :  Dim 27 mai 2018 à 21:28
--- Version du serveur :  5.7.20-18-log
--- Version de PHP :  7.1.13
+-- MariaDB SQL Dump
+-- mariadb  Ver 15.1 Distrib 10.1.26-MariaDB, for debian-linux-gnu (x86_64)
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -17,10 +11,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-
+PronosCDM
 --
--- Base de données :  `PronosCDM`
---
+-- Base de données :  `WorldCup18`
+-- User : pronos
+-- Password : pronos
 
 -- --------------------------------------------------------
 
@@ -188,7 +183,7 @@ INSERT INTO `teams` (`id`, `pays`, `groupe`) VALUES
 (6, 'Espagne', 'B'),
 (7, 'Maroc', 'B'),
 (8, 'Iran', 'B'),
-(9, 'France', 'C'),
+(9, 'France (Les Bleus)', 'C'),
 (10, 'Australie', 'C'),
 (11, 'Pérou', 'C'),
 (12, 'Danemark', 'C'),

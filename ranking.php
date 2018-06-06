@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Classement | Pronostics coupe du monde 2018</title>
+<title>Classement | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -28,7 +28,7 @@ if (!isset($_SESSION['login'])) {
 
             $req = $bdd->query("SELECT login, points FROM users WHERE login!='admin' AND actif!=0 ORDER BY points DESC");
             ?>
-            <font style="font-size: 30px;"><b>La crème de la crème</b><br/><br/></font>
+            <font style="font-size: 30px;"><b>Classement Général des joueurs</b><br/><br/></font>
         </div>
     <table width="50%" align="center" style='border-collapse: collapse;'>
         <?php

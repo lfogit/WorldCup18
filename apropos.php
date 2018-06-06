@@ -4,7 +4,7 @@ session_start();
 
 <html>
 <head>
-<title>À propos | Pronostics coupe du monde 2018</title>
+<title>À propos | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -13,20 +13,38 @@ session_start();
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
     </div><br/>
     <div align="center">
-        <font style="font-size: 30px;"><b>Rendons à César ce qui appartient à César</b></font><br/><br/>
+        <font style="font-size: 30px;"><b>A propos de ce site</b></font><br/><br/>
     </div>
     <div align="center"><font style="font-size: 20px;">
-        Ce site a été entièrement réalisé par Antoine Planchot.<br/><br/>
-        Le code source du site est disponible sur <a href="https://github.com/OpesMentis/PronosCDM">le dépôt Git du projet</a> sous licence libre.<br/><br/>
+        Le code source du site est disponible sur <a href="https://github.com/lfogit/WorldCup18">le dépôt Git du projet</a> sous licence MIT.<br/><br/>
         L'administrateur du site se réserve le droit de supprimer sans préavis ni justification votre compte.<br/><br/>
-        Ce site n'est affilié en aucune manière à la FIFA ou aux instances organisatrices de la coupe du monde de football.<br/><br/>
-        Vos données ne font l'objet d'aucun traitement automatisées à des fins commerciales et nous ne partageons pas vos informations auprès de tiers, quelqu'ils soient.<br/><br/>
-        Pour tout contact : <i>contact[at]antoineplanchot.eu</i>
+        Ce site n'est affilié en aucune manière à la FIFA ou aux instances organisatrices de la WorldCup FIFA 2018<br/><br/>
+        Vos données ne font l'objet d'aucun traitement automatisé à des fins commerciales et nous ne partageons pas vos informations auprès de tiers, quelqu'ils soient.<br/><br/>
+        Administration du site : <i>lionel[at]fortier.fr</i><brPronostics><br>
+        MIT License<br><br>
+        Copyright (c) 2018 Antoine Planchot<br>
+        Copyright (c) 2018 Lionel Fortier<br><br>
+        Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+        of this software and associated documentation files (the "Software"), to deal<br>
+        in the Software without restriction, including without limitation the rights<br>
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
+        copies of the Software, and to permit persons to whom the Software is<br>
+        furnished to do so, subject to the following conditions:<br><br>
+        The above copyright notice and this permission notice shall be included in all<br>
+        copies or substantial portions of the Software.<br><br>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
+        SOFTWARE.<br><br>
+        More information <a href="https://opensource.org/licenses/MIT">License MIT</a>
     </font></div>
 </body>

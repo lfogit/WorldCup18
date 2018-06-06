@@ -8,7 +8,7 @@ if (isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Accueil | Pronostics WorldCup 2018</title>
+<title>WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -32,7 +32,7 @@ if (isset($_SESSION['login'])) {
                     </form>
                 </font>
             </td>
-        </tr>
+        </tr> on essaie de parier sur l'équipe gagnante à l'issue de chaque phase de la compétition ju
     <?php
     include('connect.php');
 
@@ -45,7 +45,7 @@ if (isset($_SESSION['login'])) {
         if (!$data) {?>
             <tr>
                 <td align="center">
-                    <font style="font-size: 15px;">Nom d'utilisateur inconnu</font>
+                    <font style="font-size: 15px;">Utilisateur inconnu</font>
                 </td>
             </tr>
             <?php
@@ -69,7 +69,7 @@ if (isset($_SESSION['login'])) {
 
 Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou le copiant dans la barre d\'adresse de votre navigateur.
 
-' . 'https://lab.antoineplanchot.eu/cdm2018/activation.php?log=' . urlencode($data['login']) . '&clef=' . urlencode($data['clef']) . '
+' . 'https://pronos.fortier.fr/activation.php?log=' . urlencode($data['login']) . '&clef=' . urlencode($data['clef']) . '
 
 ----
 Cet email a été envoyé automatiquement, merci de ne pas y répondre.';

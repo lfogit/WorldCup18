@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Résultat de la petite finale | Pronostics coupe du monde 2018</title>
+<title>3ieme Place | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -26,7 +26,7 @@ if (!isset($_SESSION['login'])) {
         <?php
         include('connect.php');
         ?>
-        <font style="font-size: 30px;"><b><i>« Miss Granger, trois tours devraient suffire. Bonne chance. »</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : 3ieme place</i></b><br/><br/></font>
     </div>
     <?php
     $req = $bdd->prepare("SELECT id FROM users WHERE login=:pseudo");
@@ -36,13 +36,13 @@ if (!isset($_SESSION['login'])) {
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs individuels</a></font><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs de groupes</a></font><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><b>Toute la compétition</b></font><br/>
+                <font style="font-size: 15px;"><b>Le Tableau</b></font><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="divers.php">Paris divers</a></font><br/>
+                <font style="font-size: 15px;"><a href="divers.php">Les paris "bonus"</a></font><br/>
             </td>
         </tr>
     </table>

@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Paris divers | Pronostics coupe du monde 2018</title>
+<title>Paris Bonus | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -66,18 +66,18 @@ if (!isset($_SESSION['login'])) {
             }
         }
         ?>
-        <font style="font-size: 30px;"><b><i>« Sarah Connor ? »</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : les paris "Bonus"</i></b><br/><br/></font>
     </div>
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs individuels</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs de Groupes</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="groupes.php">Toute la compétition</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><b>Paris divers</b></font><br/><br/>
+                <font style="font-size: 15px;"><b>Les paris "Bonus"</b></font><br/><br/>
             </td>
         </tr>
     </table>
@@ -96,7 +96,7 @@ if (!isset($_SESSION['login'])) {
                     <input type="text" name="d" size="5" value=<?php echo '"' . $vals[3] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[3];?></font></i><br/><br/>
                 </td>
                 <td width="50%" align="center">
-                    <input type="submit" value="Je valide"/>
+                    <input type="submit" value="Valider"/>
                 </td>
             </form>
         </tr>
@@ -111,7 +111,7 @@ if (!isset($_SESSION['login'])) {
             <td width="12%" align="center"><i>1998</i></td>
         </tr>
         <tr>
-            <td width="35%" align="center"><i>Nombre de buts marqués pendant la compétition</i></td>
+            <td width="35%" align="center"><i>Nombre de buts marqués pendant la coupe du monde</i></td>
             <td width="12%" align="center">171</td>
             <td width="12%" align="center">143</td>
             <td width="12%" align="center">147</td>
@@ -135,7 +135,7 @@ if (!isset($_SESSION['login'])) {
             <td width="12%" align="center">2</td>
         </tr>
         <tr>
-            <td width="35%" align="center"><i>Nombre de cartons pendant la compétition</i></td>
+            <td width="35%" align="center"><i>Nombre de cartons pendant la coupe du monde</i></td>
             <td width="12%" align="center">188</td>
             <td width="12%" align="center">270</td>
             <td width="12%" align="center">373</td>

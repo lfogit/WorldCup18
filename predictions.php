@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Les matchs | Pronostics coupe du monde 2018</title>
+<title>Les matchs | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -40,7 +40,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -49,25 +49,25 @@ if (!isset($_SESSION['login'])) {
         <?php
         include('connect.php');
         ?>
-        <font style="font-size: 30px;"><b><i>« Là où on va on n'a pas besoin... de route »</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Matchs individuels</i></b><br/><br/></font>
     </div>
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><b>Matchs individuels</b></font><br/><br/>
+                <font style="font-size: 15px;"><b>Matchs de Groupes</b></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="groupes.php">Toute la compétition</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="divers.php">Paris divers</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="divers.php">Les paris "Bonus"</a></font><br/><br/>
             </td>
         </tr>
     </table>
     <table width="90%" align="center">
         <tr>
             <td width="100%" align="left">
-                <font style="font-size: 25px;">Les matchs à venir</font><br/><br/>
+                <font style="font-size: 25px;">Les matchs à venir :</font><br/><br/>
                 <font style="font-size: 15px;">Ne s'affichent ici que les rencontres dont l'affiche est complètement connue. Les matchs de phase finale apparaîtront donc au fur et à mesure de l'avancée de la compétition.</font><br/><br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: yellow">&nbsp;&nbsp;MATCH AUJOURD'HUI&nbsp;&nbsp;</font>
                 &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: grey">&nbsp;&nbsp;PRONOSTIC EXPRIMÉ&nbsp;&nbsp;</font>
@@ -95,7 +95,7 @@ if (!isset($_SESSION['login'])) {
                     <font style="font-size: 15px;"><b>
                         <?php
                         if ($_SESSION['login'] == 'admin') {
-                            echo 'LE MATCH N\'EST PAS ENCORE PASSÉ';
+                            echo 'LE MATCH N\'A PAS ENCORE DEMMARÉ';
                         } else {
                             if (!$res) {
                                 echo 'AUCUN PARI POUR L\'INSTANT';
@@ -118,7 +118,7 @@ if (!isset($_SESSION['login'])) {
     <table table width="90%" align="center">
         <tr>
             <td width="100%" align="left">
-                <font style="font-size: 25px;">Les matchs en attente du résultat</font><br/><br/>
+                <font style="font-size: 25px;">Les matchs en attente du résultat :</font><br/><br/>
             </td>
         </tr>
     </table>
@@ -145,9 +145,9 @@ if (!isset($_SESSION['login'])) {
                             echo '<a href="match.php?id=' . $item['id_match'] . '">RENSEIGNER LE RÉSULTAT DU MATCH</a>';
                         } else {
                             if (!$res) {
-                                echo 'TROP TARD POUR PARIER';
+                                echo 'OUPS ! TROP TARD POUR PARIER';
                             } else {
-                                echo 'VOUS PRÉVOYEZ : ' . $res['score1'] . '-' . $res['score2'];
+                                echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                             }
                         }
                         ?>
@@ -164,7 +164,7 @@ if (!isset($_SESSION['login'])) {
     <table width="90%" align="center">
         <tr>
             <td width="20%" align="left">
-                <font style="font-size: 25px;">Les matchs passés</font><br/><br/>
+                <font style="font-size: 25px;">Les matchs terminés :</font><br/><br/>
             </td>
         </tr>
     </table>
@@ -190,7 +190,7 @@ if (!isset($_SESSION['login'])) {
                         if (!$res) {
                             echo 'VOUS N\'AVIEZ PAS PARIÉ';
                         } else {
-                            echo 'VOUS PRÉVOYIEZ : ' . $res['score1'] . '-' . $res['score2'];
+                            echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                         }
                         ?>
                     </font><br/><br/>

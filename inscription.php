@@ -8,7 +8,7 @@ if (isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Inscription | Pronostics coupe du monde 2018</title>
+<title>Inscription | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><b><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><b><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div><br/>
     <?php
     include('connect.php');
@@ -30,13 +30,13 @@ if (isset($_SESSION['login'])) {
             <center><font style="font-size: 20px;">L'adresse email renseignée est incorrecte !</font></center>
             <?php
         } elseif ($_POST['mdp'] != $_POST['mdp2']) {?>
-            <center><font style="font-size: 20px;">Les deux mots de passe diffèrent !</font></center>
+            <center><font style="font-size: 20px;">Les deux mots de passe sont différents !</font></center>
             <?php
         } elseif (strlen($_POST['mdp']) < 8) {?>
             <center><font style="font-size: 20px;">Le mot de passe doit faire 8 caractères minimum !</font></center>
             <?php
         } elseif (!isset($_POST['captcha']) || !isset($_SESSION['captcha']) || !ctype_digit($_POST['captcha'])  || (int)$_POST['captcha'] != $_SESSION['captcha']) {?>
-            <center><font style="font-size: 20px;">Le résultat du test anti-robot n'est pas concluant...</font></center>
+            <center><font style="font-size: 20px;">Le résultat du test anti-robot a échoué !</font></center>
             <?php
         } else {
             $req = $bdd->prepare("SELECT COUNT(*) AS cnt FROM users WHERE LOWER(login)=LOWER(:pseudo)");
@@ -55,7 +55,7 @@ if (isset($_SESSION['login'])) {
                 <center><font style="font-size: 20px;">Nom d'utilisateur déjà pris !</font></center>
                 <?php
             } elseif ($num_mail['cnt'] != '0') {?>
-                <center><font style="font-size: 20px;">Adresse email déjà utilisée !</font></center>
+                <center><font style="font-size: 20px;">Adresse e-mail déjà utilisée !</font></center>
                 <?php
             } else {
                 $clef = md5(microtime(TRUE) * 100000);
@@ -72,9 +72,9 @@ if (isset($_SESSION['login'])) {
                 $header = 'From: "Pronostics CDM2018"<noreply@antoineplanchot.eu>';
                 $message = 'Bonjour ' . $_POST['pseudo'] . '.
 
-Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou le copiant dans la barre d\'adresse de votre navigateur.
+Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou en le copiant dans la barre d\'adresse de votre navigateur.
 
-' . 'https://lab.antoineplanchot.eu/cdm2018/activation.php?log=' . urlencode($_POST['pseudo']) . '&clef=' . urlencode($clef) . '
+' . 'https://pronos.fortier.fr/activation.php?log=' . urlencode($_POST['pseudo']) . '&clef=' . urlencode($clef) . '
 
 ----
 Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
@@ -92,7 +92,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
                 <font style="font-size: 20px;">
                     <font style="font-size: 30px;"><b>Inscription</b></font><br/><br/>
                     <form method="post" action="inscription.php">
-                        Pseudo<br/><input type="text" name="pseudo"
+                        Nom d'utilisateur<br/><input type="text" name="pseudo"
                         <?php
                         if (isset($_POST['pseudo'])) {
                             echo 'value="' . $_POST['pseudo'] . '" ';
@@ -122,7 +122,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
                         ?>
                         <font style="font-size: 15px;"><i>Donnez le résultat en chiffres de <?php echo $nb[$a-1] . ' ' . $op[$sgn] . ' ' . $nb[$b-1];?></i></font><br/>
                         <input type="text" name="captcha"/><br/><br/>
-                        <input type="submit" value="C'est parti !"/>
+                        <input type="submit" value="Inscription"/>
                     </form>
                 </font>
             </td>

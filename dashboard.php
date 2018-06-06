@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Tableau de bord | Pronostics coupe du monde 2018</title>
+<title>Dashboard | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -39,12 +39,12 @@ if (!isset($_SESSION['login'])) {
     <table width="100%" align="center" style="border-spacing: 50px;">
         <tr>
             <td width="33%" align="center">
-                <a href="ranking.php"><img src="img/rank.svg" alt="Classement" style="height:100px;"><br/>
-                <font style="font-size: 20px;">Classement</font></a>
+                <a href="ranking.php"><img src="img/rank.svg" alt="ClassemePronosticsnt" style="height:100px;"><br/>
+                <font style="font-size: 20px;">Classement Général</font></a>
             </td>
             <td width="33%" align="center">
                 <a href="predictions.php"><img src="img/crystal-ball.svg" alt="Prédictions" style="height:100px;"><br/>
-                <font style="font-size: 20px;">Prédictions</font></a>
+                <font style="font-size: 20px;">Pronostics du joueur</font></a>
             </td>
             <td width="33%" align="center">
                 <a href="settings.php"><img src="img/parameters.svg" alt="Paramètres" style="height:100px;"><br/>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['login'])) {
 
     <div align="center">
         <font style="font-size: 15px;">
-            Les icônes sont issues du site <i><a href="https://flaticon.com">Flaticon</a></i>, distribuées sous licence libre, et ont été réalisées par <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> et <a href="https://www.flaticon.com/authors/designmodo">Designmodo</a>.
+            <br><br><i>Les icônes sont issues du site <a href="https://flaticon.com">Flaticon</a>, distribuées sous licence libre, et ont été réalisées par <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> et <a href="https://www.flaticon.com/authors/designmodo">Designmodo</a>.
         </font>
     </div>
 </body>

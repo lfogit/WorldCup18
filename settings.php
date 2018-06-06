@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Paramètres | Pronostics coupe du monde 2018</title>
+<title>Paramètres | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -68,7 +68,7 @@ if (!isset($_SESSION['login'])) {
             if ($_POST['set_commu'] != 0) {
                 $req = $bdd->prepare("SELECT id, nom FROM commus WHERE id=:id_c");
                 $req->execute(array('id_c' => $_POST['set_commu']));
-            
+
                 $com = $req->fetch();
 
                 if (!$com) {
@@ -110,7 +110,7 @@ if (!isset($_SESSION['login'])) {
         } elseif (isset($_POST['old_mdp']) && isset($_POST['new_mdp']) && isset($_POST['new_mdp2'])) {
             if (password_verify($_POST['old_mdp'], $data['mdp'])) {
                 if ($_POST['new_mdp'] != $_POST['new_mdp2']) {
-                    $msg2 = 'Les deux mots de passe diffèrent !';
+                    $msg2 = 'Les deux mots de passe sont différents !';
                 } elseif (strlen($_POST['new_mdp']) < 8) {
                     $msg2 = 'Le mot de passe doit faire 8 caractères minimum !';
                 } else {
@@ -148,7 +148,7 @@ if (!isset($_SESSION['login'])) {
         <tr>
             <td id="commu" width="100%" align="left">
                 <font style="font-size: 25px;">Rejoindre une communauté</font><br/>
-                <font style="font-size: 15px;">En vous rassemblant avec vos proches au sein d'une même communauté, vous apparaîtrez ensemble dans un classement spécifique où il n'y aura que vous. Vous apparaîtrez par ailleurs toujours dans le classement général.</font><br/><br/>
+                <font style="font-size: 15px;">En vous rassemblant avec vos proches au sein d'une même communauté, vous apparaîtrez ensemble dans un classement spécifique où il n'y aura que les membres de cette dernière. Vous apparaîtrez par ailleurs toujours dans le classement général.</font><br/><br/>
                 <?php
                 if ($num_com == 0) {?>
                     <font style="font-size: 15px;">Vous n'appartenez à aucune communauté. Vous pouvez mettre un terme à cet état de fait en créant une communauté ou en en sélectionnant une ci-dessous.</font><br/><br/>
@@ -168,7 +168,7 @@ if (!isset($_SESSION['login'])) {
                 <?php
                 $commus = $bdd->query("SELECT * FROM commus");
                 ?>
-            
+
                 <form method="post" action="settings.php#commu">
                     <select name="set_commu">
                         <option value=0>--</option>

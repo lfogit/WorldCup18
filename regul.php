@@ -20,12 +20,12 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['mdp'])) {
 
         $destinataire = $_POST['email'];
         $sujet = 'Activation de votre compte';
-        $header = 'From: "Pronostics CDM2018"<noreply@antoineplanchot.eu>';
+        $header = 'From: "WorldCup18"<lionel.fortier@gmail.com>';
         $message = 'Bonjour ' . $_POST['pseudo'] . '.
 
-Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou le copiant dans la barre d\'adresse de votre navigateur.
+Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou en le copiant dans la barre d\'adresse de votre navigateur.
 
-' . 'https://lab.antoineplanchot.eu/cdm2018/activation.php?log=' . urlencode($_POST['pseudo']) . '&clef=' . urlencode($clef) . '
+' . 'https://pronos.fortier.fr/activation.php?log=' . urlencode($_POST['pseudo']) . '&clef=' . urlencode($clef) . '
 
 ----
 Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
@@ -48,7 +48,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 
 <html>
 <head>
-<title>Régularisation du compte | Pronostics coupe du monde 2018</title>
+<title>Régularisation | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -57,7 +57,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div><br/>
     <div align="center">
         <font style="font-size: 30px;"><b>Régularisation du compte</b><br/><br/></font>
@@ -65,7 +65,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
     <table width="80%" align="center" style="border-spacing: 50px;">
         <tr>
             <td width="33%" align="left">
-                <font style="font-size: 20px;">Conséquemment à une mise à jour de notre procédure d'authentification, nous vous demandons désormais de renseigner une adresse e-mail valide. Nous avons détecté que vous ne l'avez pas encore fait. Pour y remédier, merci de bien vouloir compléter le formulaire ci-dessous :</font>
+                <font style="font-size: 20px;">Suite à une mise à jour de notre procédure d'authentification, nous vous demandons désormais de renseigner une adresse e-mail valide. Nous avons détecté que vous ne l'avez pas encore fait. Pour y remédier, merci de bien vouloir compléter le formulaire ci-dessous :</font>
             </td>
         </tr>
         <tr>

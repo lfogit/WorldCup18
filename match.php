@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 <html>
 <head>
-<title>Parier sur un match | Pronostics coupe du monde 2018</title>
+<title>Match | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div>
     <div align="right">
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
@@ -44,7 +44,7 @@ if (!isset($_SESSION['login'])) {
             if (!$match) {
                 echo 'Ce match n\'existe pas.';
             } elseif (strtotime($match['dt']) < strtotime('now') && $_SESSION['login'] != 'admin') {
-                echo 'Ce match est passé.';
+                echo 'Ce match est terminé.';
             } else {
                 $req = $bdd->prepare("SELECT id_pari FROM paris_match WHERE id_user=:usr AND id_match=:play");
                 $req->execute(array('usr' => $id_perso, 'play' => $id_play));
@@ -132,7 +132,7 @@ if (!isset($_SESSION['login'])) {
                         <?php
                     }
                     ?>
-                    <input type="submit" value="Telle est mon opinion"/>
+                    <input type="submit" value="Parier"/>
                 </form><br/>
                 <font style="font-size: 20px;"><?php echo $msg;?></font>
             <?php

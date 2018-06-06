@@ -38,7 +38,7 @@ if (isset($_GET['log']) && isset($_GET['clef'])) {
 
 Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou le copiant dans la barre d\'adresse de votre navigateur.
 
-' . 'https://lab.antoineplanchot.eu/cdm2018/activation.php?log=' . urlencode($usr['login']) . '&clef=' . urlencode($usr['clef']) . '
+' . 'https://pronos.fortier.fr/activation.php?log=' . urlencode($usr['login']) . '&clef=' . urlencode($usr['clef']) . '
 
 ----
 Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
@@ -49,7 +49,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
         $msg = 'Votre compte est déjà activé. Rendez-vous en page d\'accueil pour vous connecter avec vos identifiants.';
         $nofield = true;
     } else {
-        $msg = 'Cette adresse e-mail nous est inconnue.';
+        $msg = 'Cette adresse e-mail est inconnue.';
     }
 } else {
     $msg = 'Pour finaliser votre inscription et activer votre compte, nous vous invitons à cliquer sur lien contenu dans le mail que nous venons de vous envoyer. Si vous n\'avez rien reçu, vous pouvez demander l\'envoi d\'un nouveau mail <i>via</i> le formulaire ci-dessous.';
@@ -58,7 +58,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 
 <html>
 <head>
-<title>Activation du compte | Pronostics coupe du monde 2018</title>
+<title>Activation | Pronostics WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -67,7 +67,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div><br/>
     <div align="center">
         <font style="font-size: 30px;"><b>Activation de votre compte</b><br/><br/></font>

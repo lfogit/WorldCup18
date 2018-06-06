@@ -22,12 +22,12 @@ if (isset($_POST['email'])) {
 
         $destinataire = $_POST['email'];
         $sujet = 'Réinitialisation de votre mot de passe';
-        $header = 'From: "Pronostics CDM2018"<noreply@antoineplanchot.eu>';
+        $header = 'From: "WorldCup18"<lionel.fortier@gmail.com>';
         $message = 'Bonjour ' . $data['login'] . ',
 
 Vous avez déclaré avoir oublié votre mot de passe. Merci de suivre le lien ci-dessous ou de le copier dans la barre d\'adresse de votre navigateur pour le réinitialiser.
 
-' . 'https://lab.antoineplanchot.eu/cdm2018/changemdp.php?log=' . urlencode($data['login']) . '&clef=' . urlencode($clef) . '
+' . 'https://pronos.fortier.fr/changemdp.php?log=' . urlencode($data['login']) . '&clef=' . urlencode($clef) . '
 
 ----
 Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
@@ -78,7 +78,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 
 <html>
 <head>
-<title>Mot de passe oublié | Pronostics coupe du monde 2018</title>
+<title>Mot de passe oublié | WorldCup 2018</title>
     <link href='https://fonts.googleapis.com/css?family=Mina'
     rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans'
@@ -87,7 +87,7 @@ Cet email a été envoyé automatiquement, merci de ne pas y répondre.';
 </head>
 <body>
     <div align="left">
-        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS COUPE DU MONDE 2018</b></a></font>
+        <font style="font-family: 'Mina'; font-size: 20px;"><a href="index.php"><b>PRONOSTICS WorldCup 2018</b></a></font>
     </div><br/>
     <div align="center">
         <font style="font-size: 30px;"><b>Mot de passe oublié</b><br/><br/></font>

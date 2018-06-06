@@ -1,14 +1,17 @@
-# PronosCDM
-Il s'agit d'un projet personnel en PHP en vue de la coupe du monde de football. Un groupe d'amis ou de collègues peuvent sur ce site centraliser leurs pronostics.
+# WorldCup18
+
+Site web permettant de faire des pronostics sur plusieurs critères.
 
 Plusieurs sortes de pronostics sont possibles :
-* Les prévisions sur chaque matchs où chacun est invité à deviner le score
-* Les prévisions globales où on essaie de deviner l'issue de chaque phase de la compétition jusqu'au vainqueur final
-* Et d'autres paris divers sur des données comme le nombre de buts marqués, le nombre de cartons, etc
+- Les prévisions sur chaque match où chacun est invité à parier sur le score
+- Les prévisions globales où on essaie de parier sur l'équipe gagnante à l'issue de chaque phase de la compétition et ce jusqu'au vainqueur final
+- Et d'autres paris divers sur des données comme le nombre de buts marqués, le nombre de cartons, etc...
 
-Un système de points permet aux personnes de se comparer les unes avec les autres.
+Un système de points permet de dresser un classement général et par communauté.
 
-L'administration du site se fait par l'utilisateur 'admin', qui doit être créé au préalable comme un utilisateur normal.
+L'administration du site se fait par l'utilisateur "admin", qui sera créé comme un utilisateur standard.
+Le login "admin" le rend administrateur.
 
-URL du site : 
+URL du site : https://pronos.fortier.fr
+
 # WorldCup18
