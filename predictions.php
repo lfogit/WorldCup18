@@ -98,7 +98,7 @@ if (!isset($_SESSION['login'])) {
                             echo 'LE MATCH N\'A PAS ENCORE DEMARRÉ';
                         } else {
                             if (!$res) {
-                                echo 'OUPS ! TROP TARD POUR PARIER';
+                                echo 'EN ATTENTE DE PRONOSTIC';
                             } else {
                                 echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                             }
