@@ -49,12 +49,12 @@ if (!isset($_SESSION['login'])) {
         <?php
         include('connect.php');
         ?>
-        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Matchs individuels</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Matchs de groupes</i></b><br/><br/></font>
     </div>
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><b>Matchs de Groupes</b></font><br/><br/>
+                <font style="font-size: 15px;"><b>Matchs de groupes</b></font><br/><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
@@ -70,10 +70,10 @@ if (!isset($_SESSION['login'])) {
                 <font style="font-size: 25px;">Les matchs à venir :</font><br/><br/>
                 <font style="font-size: 15px;">Ne s'affichent ici que les rencontres dont l'affiche est complètement connue. Les matchs de phase finale apparaîtront donc au fur et à mesure de l'avancée de la compétition.</font><br/><br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: yellow">&nbsp;&nbsp;MATCH AUJOURD'HUI&nbsp;&nbsp;</font>
-                &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: #39EABF">&nbsp;&nbsp;PRONOSTIC EXPRIMÉ&nbsp;&nbsp;</font>
-                &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: #FFD4E6">&nbsp;&nbsp;EN ATTENTE DE VOTRE OPINION&nbsp;&nbsp;</font><br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: #C3FDB8">&nbsp;&nbsp;PRONOSTIC EXPRIMÉ&nbsp;&nbsp;</font>
+                &nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 15px; background: #FAAFBA">&nbsp;&nbsp;EN ATTENTE DE VOTRE PRONOSTIC&nbsp;&nbsp;</font><br/><br/>
             </td>
-        </tr>grey
+        </tr>
     </table>
     <table width="90%" align="center" style="border-spacing: 10px;" id="matchs">
         <?php
@@ -81,14 +81,14 @@ if (!isset($_SESSION['login'])) {
 
         $i = 0;
         while ($item = $req->fetch()) {
-            $pari = $bdd->prepare("SELECT score1, score2 FROM paris_match JOIN users ON users.id grey= paris_match.id_user WHERE id_match=:play AND users.login=:usr");
+            $pari = $bdd->prepare("SELECT score1, score2 FROM paris_match JOIN users ON users.id = paris_match.id_user WHERE id_match=:play AND users.login=:usr");
             $pari->execute(array('play' => $item['id_match'], 'usr' => $_SESSION['login']));
             $res = $pari->fetch();
             if ($i % 4 == 0) {?>
             <tr>
             <?php
             }?>
-                <td width="20%" align="center" id=<?php echo '"' . $item['id_match'] . '"';?> style="border: 1px solid black; <?php echo 'background-color: ' . (date("Y-m-d") == $item['day']? 'yellow;': (!$res? '#FFD4E6;': '#39EABF;')) ?>"><a href=<?php echo "match.php?id=" . $item['id_match']; ?>><div><br/>
+                <td width="20%" align="center" id=<?php echo '"' . $item['id_match'] . '"';?> style="border: 1px solid black; <?php echo 'background-color: ' . (date("Y-m-d") == $item['day']? 'yellow;': (!$res? '#FAAFBA;': '#C3FDB8;')) ?>"><a href=<?php echo "match.php?id=" . $item['id_match']; ?>><div><br/>
                     <font style="font-size: 20px;"><?php echo $item['e1'] . ' — ' . $item['e2'];?></font><br/>
                     <font style="font-size: 15px;">-- / --</font><br/>
                     <font style="font-size: 15px;"><?php echo $item['dt'];?></font><br/>
@@ -98,9 +98,9 @@ if (!isset($_SESSION['login'])) {
                             echo 'LE MATCH N\'A PAS ENCORE DEMARRÉ';
                         } else {
                             if (!$res) {
-                                echo 'AUCUN PARI POUR L\'INSTANT';
+                                echo 'OUPS ! TROP TARD POUR PARIER';
                             } else {
-                                echo 'VOUS PRÉVOYEZ : ' . $res['score1'] . '-' . $res['score2'];
+                                echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                             }
                         }
                         ?>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['login'])) {
                             echo '<a href="match.php?id=' . $item['id_match'] . '">RENSEIGNER LE RÉSULTAT DU MATCH</a>';
                         } else {
                             if (!$res) {
-                                echo 'OUPS ! TROP TARD POUR PARIER';
+                                echo 'TROP TARD POUR PARIER';
                             } else {
                                 echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                             }
