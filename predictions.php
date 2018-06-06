@@ -60,7 +60,7 @@ if (!isset($_SESSION['login'])) {
                 <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="divers.php">Les paris "Bonus"</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="divers.php">Les paris Bonus</a></font><br/><br/>
             </td>
         </tr>
     </table>
@@ -145,7 +145,7 @@ if (!isset($_SESSION['login'])) {
                             echo '<a href="match.php?id=' . $item['id_match'] . '">RENSEIGNER LE RÉSULTAT DU MATCH</a>';
                         } else {
                             if (!$res) {
-                                echo 'TROP TARD POUR PARIER';
+                                echo 'OUPS, TROP TARD POUR PARIER !';
                             } else {
                                 echo 'VOUS PARIEZ : ' . $res['score1'] . '-' . $res['score2'];
                             }

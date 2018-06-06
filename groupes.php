@@ -26,7 +26,7 @@ if (!isset($_SESSION['login'])) {
         <?php
         include('connect.php');
         ?>
-        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Matchs individuels</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Le Tableau</i></b><br/><br/></font>
     </div>
     <?php
     $grp = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
@@ -37,13 +37,13 @@ if (!isset($_SESSION['login'])) {
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs de Groupes</a></font><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs de groupes</a></font><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><b>Le Tableau</b></font><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="divers.php">Les paris "Bonus"</a></font><br/>
+                <font style="font-size: 15px;"><a href="divers.php">Les paris Bonus</a></font><br/>
             </td>
         </tr>
     </table>

@@ -34,7 +34,7 @@ if (!isset($_SESSION['login'])) {
         $items = ['a', 'b', 'c', 'd'];
         $msg = [' ', ' ', ' ', ' '];
 
-        for ($i = 0; $i < 4; $i++) {valide
+        for ($i = 0; $i < 4; $i++) {
             $req = $bdd->prepare("SELECT id_pari, val FROM paris_divers WHERE id_user=:usr AND id_obj=:item");
             $req->execute(array('usr' => $id_perso, 'item' => $items[$i]));
             $pari = $req->fetch();
@@ -66,18 +66,18 @@ if (!isset($_SESSION['login'])) {
             }
         }
         ?>
-        <font style="font-size: 30px;"><b><i>Pronostics du joueur : les paris "Bonus"</i></b><br/><br/></font>
+        <font style="font-size: 30px;"><b><i>Pronostics du joueur : Les Paris Bonus</i></b><br/><br/></font>
     </div>
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs de Groupes</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs de groupes</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><b>Les paris "Bonus"</b></font><br/><br/>
+                <font style="font-size: 15px;"><b>Les paris Bonus</b></font><br/><br/>
             </td>
         </tr>
     </table>
@@ -85,14 +85,14 @@ if (!isset($_SESSION['login'])) {
         <tr>
             <form method="post" action="divers.php">
                 <td width="50%" align="right">
-                    <br/>on essaie de parier sur l'équipe gagnante à l'issue de chaque phase de la compétition ju
-                    <font style="font-size: 20px;">Nombre de buts marqués pendant la compétition</font>
+                    <br/>
+                    <font style="font-size: 20px;">Nombre de buts marqués pendant la coupe du monde</font>
                     <input type="text" name="a" size="5" value=<?php echo '"' . $vals[0] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[0];?></font></i><br/><br/>
                     <font style="font-size: 20px;">Nombre de buts marqués par la France</font>
                     <input type="text" name="b" size="5" value=<?php echo '"' . $vals[1] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[1];?></font></i><br/><br/>
                     <font style="font-size: 20px;">Nombre de buts encaissés par la France</font>
                     <input type="text" name="c" size="5" value=<?php echo '"' . $vals[2] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[2];?></font></i><br/><br/>
-                    <font style="font-size: 20px;">Nombre de cartons pendant la compétition</font>
+                    <font style="font-size: 20px;">Nombre de cartons pendant la coupe du monde</font>
                     <input type="text" name="d" size="5" value=<?php echo '"' . $vals[3] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[3];?></font></i><br/><br/>
                 </td>
                 <td width="50%" align="center">
@@ -135,7 +135,7 @@ if (!isset($_SESSION['login'])) {
             <td width="12%" align="center">2</td>
         </tr>
         <tr>
-            <td width="35%" align="center"><i>Nombre de cartons pendant la coupe du monde</i></td>
+            <td width="35%" align="center"><i>Nombre de cartons pendant la coupe de monde</i></td>
             <td width="12%" align="center">188</td>
             <td width="12%" align="center">270</td>
             <td width="12%" align="center">373</td>
