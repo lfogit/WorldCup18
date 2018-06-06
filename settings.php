@@ -142,7 +142,7 @@ if (!isset($_SESSION['login'])) {
             }
         }
         ?>
-        <font style="font-size: 30px;"><b>L'arrière-boutique</b><br/><br/></font>
+        <font style="font-size: 30px;"><b>Paramétrage</b><br/><br/></font>
     </div>
     <table width="90%" align="center" style="border-spacing: 10px;">
         <tr>

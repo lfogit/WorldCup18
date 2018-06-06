@@ -22,15 +22,16 @@ session_start();
         <font style="font-size: 30px;"><b>A propos de ce site</b></font><br/><br/>
     </div>
     <div align="center"><font style="font-size: 20px;">
-        Le code source du site est disponible sur <a href="https://github.com/lfogit/WorldCup18">le dépôt Git du projet</a> sous licence MIT.<br/><br/>
-        L'administrateur du site se réserve le droit de supprimer sans préavis ni justification votre compte.<br/><br/>
-        Ce site n'est affilié en aucune manière à la FIFA ou aux instances organisatrices de la WorldCup FIFA 2018<br/><br/>
-        Vos données ne font l'objet d'aucun traitement automatisé à des fins commerciales et nous ne partageons pas vos informations auprès de tiers, quelqu'ils soient.<br/><br/>
+        Le code source du site est disponible sur <a href="https://github.com/lfogit/WorldCup18">le dépôt Git du projet</a> sous licence MIT.<br/>
+        L'administrateur du site se réserve le droit de supprimer sans préavis ni justification votre compte.<br/>
+        Ce site n'est affilié en aucune manière à la FIFA ou aux instances organisatrices de la WorldCup FIFA 2018<br/>
+        Vos données ne font l'objet d'aucun traitement automatisé à des fins commerciales et nous ne partageons pas vos informations auprès de tiers, quelqu'ils soient.<br/>
         Administration du site : <i>lionel[at]fortier.fr</i><brPronostics><br>
         MIT License<br><br>
         Copyright (c) 2018 Antoine Planchot<br>
         Copyright (c) 2018 Lionel Fortier<br><br>
-        Permission is hereby granted, free of charge, to any person obtaining a copy<br>
+        <font style="font-size: 12px;">
+        <i>Permission is hereby granted, free of charge, to any person obtaining a copy<br>
         of this software and associated documentation files (the "Software"), to deal<br>
         in the Software without restriction, including without limitation the rights<br>
         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>
@@ -44,7 +45,8 @@ session_start();
         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>
-        SOFTWARE.<br><br>
-        More information <a href="https://opensource.org/licenses/MIT">License MIT</a>
+        SOFTWARE.<br><br></i>
+      </font>
+        More information <a href="https://opensource.org/licenses/MIT">MIT License</a>
     </font></div>
 </body>

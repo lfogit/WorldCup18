@@ -95,7 +95,7 @@ if (!isset($_SESSION['login'])) {
                     <font style="font-size: 15px;"><b>
                         <?php
                         if ($_SESSION['login'] == 'admin') {
-                            echo 'LE MATCH N\'A PAS ENCORE DEMMARÉ';
+                            echo 'LE MATCH N\'A PAS ENCORE DEMARRÉ';
                         } else {
                             if (!$res) {
                                 echo 'AUCUN PARI POUR L\'INSTANT';

@@ -34,7 +34,7 @@ if (!isset($_SESSION['login'])) {
         $items = ['a', 'b', 'c', 'd'];
         $msg = [' ', ' ', ' ', ' '];
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 4; $i++) {valide
             $req = $bdd->prepare("SELECT id_pari, val FROM paris_divers WHERE id_user=:usr AND id_obj=:item");
             $req->execute(array('usr' => $id_perso, 'item' => $items[$i]));
             $pari = $req->fetch();
@@ -85,7 +85,7 @@ if (!isset($_SESSION['login'])) {
         <tr>
             <form method="post" action="divers.php">
                 <td width="50%" align="right">
-                    <br/>
+                    <br/>on essaie de parier sur l'équipe gagnante à l'issue de chaque phase de la compétition ju
                     <font style="font-size: 20px;">Nombre de buts marqués pendant la compétition</font>
                     <input type="text" name="a" size="5" value=<?php echo '"' . $vals[0] . '" ' . ($_SESSION['login'] != 'admin' && strtotime('2018-06-18 15:00:00') < strtotime('now') ? 'disabled': '');?>/><br/><i><font style="font-size: 15px;"><?php echo $msg[0];?></font></i><br/><br/>
                     <font style="font-size: 20px;">Nombre de buts marqués par la France</font>

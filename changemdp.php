@@ -7,7 +7,7 @@ if (isset($_SESSION['login'])) {
 
 include('connect.php');
 
-$msg = 'Pour réinitialiser votre mot de passe, entrez dans le champ ci-dessous votre adresse e-mail.';
+$msg = 'Pour réinitialiser votre mot de passe, entrez dans le champ ci-dessous votre adresse e-mail :';
 $res = '';
 $change = false;
 

@@ -23,7 +23,7 @@ if (!isset($_SESSION['login'])) {
         <font style="font-size: 20px;"><a href="logout.php">Déconnexion</a></font>
     </div><br/>
     <div align="center">
-        <font style="font-size: 30px;"><b>Dura lex sed lex</b></font><br/><br/>
+        <font style="font-size: 30px;"><b>Foire aux questions</b></font><br/><br/>
     </div>
     <table width="90%" align="center" style="border-spacing: 10px;">
         <tr>
