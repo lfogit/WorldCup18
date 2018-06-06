@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 USE WorldCup18;
 --
 -- Base de données :  `WorldCup18`
--- User : pronos
+-- User : pronos --> GRANT TO WorldCup18.* 
 -- Password : pronos
 
 -- --------------------------------------------------------

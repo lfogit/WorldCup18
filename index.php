@@ -32,7 +32,7 @@ if (isset($_SESSION['login'])) {
                     </form>
                 </font>
             </td>
-        </tr> on essaie de parier sur l'équipe gagnante à l'issue de chaque phase de la compétition ju
+        </tr>
     <?php
     include('connect.php');
 
