@@ -10,5 +10,5 @@ Un système de points permet aux personnes de se comparer les unes avec les autr
 
 L'administration du site se fait par l'utilisateur 'admin', qui doit être créé au préalable comme un utilisateur normal.
 
-Site accessible à antoineplanchot.eu/cdm2018.
+URL du site : 
 # WorldCup18
