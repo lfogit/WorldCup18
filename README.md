@@ -14,4 +14,20 @@ Le login "admin" le rend administrateur.
 
 URL du site : https://pronos.fortier.fr
 
+Sécurisation sur NGINX
+
+Ajouter les exclusions des fichiers ci-dessous :
+
+location /config.ini {
+  deny all;
+}
+
+location /config.ini.dist {
+  deny all;
+}
+
+location /WorldCup18.sql {
+  deny all;
+}
+
 # WorldCup18
