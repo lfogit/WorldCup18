@@ -18,8 +18,9 @@ if (isset($_SESSION['login'])) {
 
 <body>
     <div align="center">
-        <font style="font-family: 'Mina'; font-size: 40px;"><b>PRONOSTICS WorldCup 2018</b></font>
-    </div><br/><br/>
+        <font style="font-family: 'Mina'; font-size: 40px;"><b>PRONOSTICS WorldCup 2018</b></font><br>
+	<img src="img/FIFA_World_Cup_2018_Logo.png" alt="Programme" style="height:150px;">
+    </div><br/>
     <table align="center" border="0">
         <tr>
             <td width="300">

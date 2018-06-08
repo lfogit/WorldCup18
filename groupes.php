@@ -37,13 +37,22 @@ if (!isset($_SESSION['login'])) {
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs de groupes</a></font><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs individuels</a></font><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><b>Le Tableau</b></font><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><a href="divers.php">Les paris Bonus</a></font><br/>
+            </td>
+        </tr>
+    </table>
+    <table width="90%" align="center">
+        <tr>
+            <td width="100%" align="left">
+                <font style="font-size: 15px;">
+                <br><font color="red"><b>Attention, les pronostics doivent être renseignés avant le 14 juin 2018 17h00 !</b></font>
+                </font><br/><br/>
             </td>
         </tr>
     </table>
@@ -68,7 +77,7 @@ if (!isset($_SESSION['login'])) {
                 $winners[$i][0] = $data['id_e1'];
                 $winners[$i][1] = $data['id_e2'];
             }
-            if (($_SESSION['login'] == 'admin' || strtotime('2018-06-14 15:00:00') > strtotime('now')) && isset($_POST[$grp[$i] . '1']) && isset($_POST[$grp[$i] . '2'])) {
+            if (($_SESSION['login'] == 'admin' || strtotime('2018-06-14 17:00:00') > strtotime('now')) && isset($_POST[$grp[$i] . '1']) && isset($_POST[$grp[$i] . '2'])) {
                 $e1 = $_POST[$grp[$i] . '1'];
                 $e2 = $_POST[$grp[$i] . '2'];
                 if ($e1 == $e2 && $e1 != '0') {

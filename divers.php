@@ -71,13 +71,22 @@ if (!isset($_SESSION['login'])) {
     <table width="100%" align="center">
         <tr>
             <td width="20%" align="center">
-                <font style="font-size: 15px;"><a href="predictions.php">Matchs de groupes</a></font><br/><br/>
+                <font style="font-size: 15px;"><a href="predictions.php">Matchs individuels</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><a href="groupes.php">Le Tableau</a></font><br/><br/>
             </td>
             <td width="20%" align="center">
                 <font style="font-size: 15px;"><b>Les paris Bonus</b></font><br/><br/>
+            </td>
+        </tr>
+    </table>
+    <table width="90%" align="center">
+        <tr>
+            <td width="100%" align="left">
+                <font style="font-size: 15px;">
+                <br><font color="red"><b>Attention, les pronostics doivent être renseignés avant le 14 juin 2018 17h00 !</b></font>
+                </font><br/><br/>
             </td>
         </tr>
     </table>

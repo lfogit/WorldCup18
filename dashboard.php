@@ -66,14 +66,24 @@ if (!isset($_SESSION['login'])) {
             </td>
             <td width="33%" align="center">
                 <a href="faq.php"><img src="img/question.svg" alt="Foire aux questions" style="height:100px;"><br/>
-                <font style="font-size: 20px;">Foire aux questions</font></a>
+                <font style="font-size: 20px;">Règlement - FAQ</font></a>
             </td>
         </tr>
         <tr>
+	<tr>
+	    <td width="33%" align="center">
+	    </td>
+ 	    <td width="33%" align="center">
+	        <a href="programme.php"><img src="img/FIFA_World_Cup_2018_Logo.png" alt="Programme" style="height:150px;"><br/>
+       		<font style="font-size: 20px;">Programme</font></a>
+            </td>
+            <td width="33%" align="center">
+            </td>
+	</tr>
             <td></td>
         <?php
         if ($_SESSION['login'] == 'admin') {?>
-            <td width="33%" align="center">
+	    <td width="33%" align="center">
                 <br/><br/>
                 <font style="font-size: 30px;"><a href="calcul.php">Mise à jour des matchs et des points</a></font>
             </td>
@@ -82,8 +92,10 @@ if (!isset($_SESSION['login'])) {
     </table>
 
     <div align="center">
-        <font style="font-size: 15px;">
-            <br><br><i>Les icônes sont issues du site <a href="https://flaticon.com">Flaticon</a>, distribuées sous licence libre, et ont été réalisées par <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> et <a href="https://www.flaticon.com/authors/designmodo">Designmodo</a>.
+
+	<font style="font-size: 12px;">
+            <br><br><i>Les icônes sont distribuées sous licence libre, et ont été réalisées par <a href="https://www.flaticon.com/authors/freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> et <a href="https://www.flaticon.com/authors/designmodo">Designmodo</a>.
+	    <br>Ce site est auto-hebergé passionnément avec<br><img src="img/debian.png" alt="debian" style="height:50px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/nginx.png" alt="nginx" style="height:25px;">
         </font>
     </div>
 </body>
