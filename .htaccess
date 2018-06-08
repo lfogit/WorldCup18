@@ -2,3 +2,11 @@
 Order allow,deny
 Deny from all
 </Files>
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+<Files config.ini.dist>
+Order allow,deny
+Deny from all
+</Files>

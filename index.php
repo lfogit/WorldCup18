@@ -65,7 +65,7 @@ if (isset($_SESSION['login'])) {
             } elseif ($data['actif'] == '0' && $data['email']) {
                 $destinataire = $data['email'];
                 $sujet = 'Activation de votre compte';
-                $header = 'From: "Pronostics CDM2018"<noreply@antoineplanchot.eu>';
+                $header = 'From: "WorldCup18"<lionel.fortier@gmail.com>';
                 $message = 'Bonjour ' . $data['login'] . '.
 
 Votre inscription est presque finalisée, il ne vous reste plus qu\'à activer votre compte en cliquant sur le lien ci-dessous ou le copiant dans la barre d\'adresse de votre navigateur.
